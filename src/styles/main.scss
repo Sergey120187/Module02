@@ -1,0 +1,15 @@
+$bg: #ccc;
+
+.box {
+  background-color: $bg;
+  &__svg {
+    transition: all 3s;
+    &:hover {
+      background-color:aquamarine;
+      & path {
+        fill: #000;
+      }
+    }
+
+  }
+}

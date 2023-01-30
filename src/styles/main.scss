@@ -3,7 +3,10 @@ $bg: #ccc;
 .box {
   background-color: $bg;
   &__svg {
-    transition: all 3s;
+    transition: background-color 1s;
+    & path {
+      transition: fill 3s;
+    }
     &:hover {
       background-color:aquamarine;
       & path {

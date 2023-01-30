@@ -1,1 +1,1 @@
-.box{background-color:#ccc}
+.box{background-color:#ccc}.box__svg{transition:background-color 1s}.box__svg path{transition:fill 3s}.box__svg:hover{background-color:#7fffd4}.box__svg:hover path{fill:#000}

@@ -15,10 +15,14 @@ html {
 body {
   font-size: 1.6rem;
   font-family: $font-jost;
+  color: $green;
 }
 
-.main {
-  padding-top: 40px;
+.container {
+  max-width: 1440px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .header {
@@ -40,7 +44,6 @@ body {
 
   &__link,
   &__tel {
-    font-size: 1.6rem;
     color: $green;
     text-decoration: none;
     transition: color $t;
@@ -86,4 +89,53 @@ body {
   display: block;
   width: 12.3rem;
   height: 3.2rem;
+}
+
+.title {
+  font-family: $font-corm;
+  font-size: 8rem;
+  margin: 0;
+  &__span {
+    font-style: italic;
+  }
+  &_block {
+    .title__span {
+      display: block;
+    }
+  }
+}
+
+.description {
+  margin: 0;
+  &_size-s {
+    font-size: 1.8rem;
+  }
+}
+
+.link {
+  display: inline-block;
+  color: $white;
+  text-transform: uppercase;
+  padding: 2.5rem 4.2rem;
+  background-color: $orange;
+  box-shadow: 0 1rem 1.1rem 0.2rem rgba(207, 92, 13, 0.2);
+  text-decoration: none;
+  border-radius: 3.8rem;
+}
+
+.main {
+  padding-top: 40px;
+  background-image: url(../images/main.png);
+  background-size: cover;
+  background-position-x: center;
+
+  &__link {
+    margin-top: 6rem;
+  }
+
+  &__item {
+    max-width: 378px;
+    margin-left: 12rem;
+    margin-top: 6rem;
+  }
 }

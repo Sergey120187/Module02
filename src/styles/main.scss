@@ -29,7 +29,7 @@ body {
   max-width: 1440px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin: 0 auto 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,10 +124,130 @@ body {
 }
 
 .main {
-  padding-top: 40px;
+  position: relative;
+  padding: 40px 0 187px;
   background-image: url(../images/main.png);
   background-size: cover;
   background-position-x: center;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+  }
+
+  &__cover {
+    flex-basis: 763px;
+    height: 763px;
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__btn {
+    border: none;
+    padding: 0;
+    color: $green;
+    position: absolute;
+    text-align: left;
+    background-color: transparent;
+    &::before {
+      content: '';
+      background-color: $green;
+      width: 11px;
+      height: 11px;
+      border-radius: 100%;
+      box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+      position: absolute;
+      transition: background-color $t, box-shadow $t;
+    }
+    &:hover::before {
+      background-color: $orange;
+      box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+    }
+    &_1 {
+      top: 87px;
+      left: 34px;
+      &::before {
+        bottom: 10px;
+        right: -25px;
+      }
+    }
+    &_2 {
+      top: 200px;
+      left: 687px;
+      &::before {
+        top: 15px;
+        left: -25px;
+      }
+    }
+    &_3 {
+      bottom: -48px;
+      right: 265px;
+      &::before {
+        top: -25px;
+        right: 30px;
+      }
+    }
+  }
+  &__food {
+    display: block;
+    color:rgba($green, 0.8);
+  }
+
+  &__tomato {
+    width: 11rem;
+    position: absolute;
+    bottom: 120px;
+    right: 120px;
+  }
+  &__avocado {
+    position: absolute;
+    width: 19.4rem;
+    top: 44px;
+    right: 0;
+  }
+  &__cucumber {
+    position: absolute;
+    width: 8.5rem;
+    top: 0;
+    left: 690px;
+  }
+  &__pepper {
+    position: absolute;
+    width: 8.5rem;
+    left: 40px;
+    top: 400px;
+  }
+  &__beans {
+    position: absolute;
+    width: 6.5rem;
+    left: 0;
+    bottom: 165px;
+  }
+
+  &__line {
+    width: 658px;
+    height: 658px;
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__image {
+    position: absolute;
+    width: 92%;
+    top: 68px;
+    left: 70px;
+  } 
 
   &__link {
     margin-top: 6rem;

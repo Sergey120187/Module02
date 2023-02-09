@@ -5,6 +5,7 @@ $font-corm: 'Cormorant', serif;
 
 $green: #27300f;
 $orange: #d26a22;
+$black: #000;
 $white: #fff;
 $t: 0.5s;
 
@@ -29,7 +30,7 @@ body {
   max-width: 1440px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto 6rem;
+  margin: 0 auto 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,9 +86,9 @@ body {
 .logo {
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   display: block;
-  width: 12.3rem;
+  width: 12rem;
   height: 3.2rem;
 }
 
@@ -107,14 +108,19 @@ body {
 
 .description {
   margin: 0;
+  line-height: 1.5;
   &_size-s {
     font-size: 1.8rem;
+  }
+  &_size-m {
+    font-size: 2.4rem;
   }
 }
 
 .link {
   display: inline-block;
   color: $white;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   padding: 2.5rem 4.2rem;
   background-color: $orange;
@@ -129,6 +135,8 @@ body {
   background-image: url(../images/main.png);
   background-size: cover;
   background-position-x: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 
   &__flex {
     display: flex;
@@ -138,8 +146,8 @@ body {
   }
 
   &__cover {
-    flex-basis: 763px;
-    height: 763px;
+    flex-basis: 758px;
+    height: 758px;
     border: 1px solid rgba($green, 0.4);
     border-radius: 100%;
     align-items: center;
@@ -205,35 +213,40 @@ body {
     position: absolute;
     bottom: 120px;
     right: 120px;
+    z-index: -1;
   }
   &__avocado {
     position: absolute;
     width: 19.4rem;
-    top: 44px;
+    top: 46px;
     right: 0;
+    z-index: -1;
   }
   &__cucumber {
     position: absolute;
     width: 8.5rem;
     top: 0;
     left: 690px;
+    z-index: -1;
   }
   &__pepper {
     position: absolute;
     width: 8.5rem;
     left: 40px;
     top: 400px;
+    z-index: -1;
   }
   &__beans {
     position: absolute;
     width: 6.5rem;
     left: 0;
     bottom: 165px;
+    z-index: -1;
   }
 
   &__line {
-    width: 658px;
-    height: 658px;
+    width: 656px;
+    height: 656px;
     border: 1px solid rgba($green, 0.4);
     border-radius: 100%;
     align-items: center;
@@ -257,5 +270,40 @@ body {
     max-width: 378px;
     margin-left: 12rem;
     margin-top: 6rem;
+  }
+}
+
+.offer {
+  background-image: url(../images/offer.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-top: 2rem;
+  padding-bottom: 200px;
+  &__text {
+    margin-top: 6rem;
+    max-width: 700px;
+  }
+  &__slider {
+    overflow: hidden;
+    padding-top: 100px;
+  }
+}
+
+.swiper {
+  overflow: initial;
+  &-slide {
+
+  }
+  &-button-next,
+  &-button-prev {
+    top: -60px;
+    &::after {
+      color: $green;
+    }
+  }
+  &-button-prev {
+    left: initial;
+    right: 100px;
   }
 }

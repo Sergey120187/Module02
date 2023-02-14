@@ -293,13 +293,24 @@ body {
 .swiper {
   overflow: initial;
   &-slide {
-
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 4rem 3.7rem;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   &-button-next,
   &-button-prev {
     top: -60px;
     &::after {
-      color: $green;
+      color: rgba($green, 0.4);
+      font-size: 20px;
+    }
+    &:hover::after {
+      color:rgba($green, 1);
     }
   }
   &-button-prev {

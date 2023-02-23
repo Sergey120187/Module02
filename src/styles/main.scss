@@ -301,17 +301,37 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: box-shadow $t;
+    &:hover {
+      box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+      .swiper-slide__hover {
+        height: 233px;
+        opacity: 1;
+      }
+    }
+    &_milk {
+      background-image: url(../images/milk.png);
+    }
+    &_pasta {
+      background-image: url(../images/pasta.png);
+    }
+    &_steaks {
+      background-image: url(../images/steaks.png);
+    }
     &__title {
       font-family: $font-corm;
       font-size: 3rem;
       color: $green;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
     }
     &__text {
       color: rgba($green, 0.7);
       line-height: 1.5;
       margin-bottom: 3.4rem;
       max-width: 263px;
+      margin-top: 2.5rem;
     }
     &__link {
       text-transform: uppercase;
@@ -323,6 +343,9 @@ body {
       display: flex;
       align-items: center;
       gap: 2rem;
+      &:hover {
+        opacity: 1;
+      }
       &::before {
         content: '';
         width: 3rem;
@@ -332,6 +355,11 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
       }
+    }
+    &__hover {
+      height: 0;
+      opacity: 0;
+      transition: height $t, opacity $t;
     }
   }
   &-button-next,

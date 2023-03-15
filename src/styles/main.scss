@@ -293,8 +293,9 @@ body {
 .swiper {
   overflow: initial;
   &-slide {
+    position: relative;
     border: 1px solid rgba($green, 0.4);
-    border-radius: 20px;
+    border-radius: 2rem;
     box-sizing: border-box;
     padding: 4rem 3.7rem;
     height: 520px;
@@ -304,11 +305,26 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     transition: box-shadow $t;
+    z-index: 0;
+    &::after {
+      position: absolute;
+        border-radius: 2rem;
+        content: '';
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        left: 2px;
+        top: 2px;
+        z-index: -1;
+        transition: background-color $t;
+    }
     &:hover {
       box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
       .swiper-slide__hover {
         height: 233px;
         opacity: 1;
+      }
+      &::after {
+        background-color: rgba($white, .55);
       }
     }
     &_milk {
@@ -343,6 +359,7 @@ body {
       display: flex;
       align-items: center;
       gap: 2rem;
+      transition: opacity $t;
       &:hover {
         opacity: 1;
       }

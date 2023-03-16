@@ -406,41 +406,58 @@ body {
   &__box {
     display: flex;
     justify-content: space-between;
+    padding-top: 6.3rem;
+    align-items: center;
   }
   &__text {
     padding-left: 12rem;
-    max-width: 59rem;
-    width: 100%;
+    flex-basis: 620px;
   }
   &__list {
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    // display: flex;
-    // justify-content: space-between;
+    display: flex;
+    gap: 9rem;
     max-width: 46.7rem;
     width: 100%;
     list-style: none;
     font-family: $font-corm;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 3rem;
     font-style: italic;
   }
   &__item {
-    position: relative;
-    text-align: center;
-    height: 138px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     &::before {
-      position: absolute;
       content: '';
-      width: 100%;
+      border-radius: 100%;
+      border: 1px solid rgba($green, 0.4);
+      width: 87px;
       height: 87px;
-      background-color: #d26a22;
-      top: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin-bottom: 1.5rem;
+    }
+    &:nth-child(1) {
+      &::before {
+        background-image: url(../images/icon-fruits.svg);
+        background-size: 44px 41px;
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        background-image: url(../images/icon-traditional.svg);
+        background-size: 39px 39px;
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        background-image: url(../images/icon-good.svg);
+        background-size: 45px 39px;
+      }
     }
   }
 }

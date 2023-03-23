@@ -285,10 +285,11 @@ body {
     margin-top: 6rem;
     max-width: 700px;
   }
-  &__slider {
-    overflow: hidden;
-    padding-top: 90px;
-  }
+}
+
+.slider {
+  overflow: hidden;
+  padding-top: 90px;
 }
 
 .swiper {
@@ -307,23 +308,28 @@ body {
     background-size: cover;
     transition: box-shadow $t;
     z-index: 0;
-    &::after {
-      position: absolute;
-        border-radius: 2rem;
-        content: '';
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        left: 2px;
-        top: 2px;
-        z-index: -1;
-        transition: background-color $t;
+    &_white {
+      &:hover {
+        .swiper-slide__hover {
+          height: 233px;
+          opacity: 1;
+        }
+        &::after {
+          position: absolute;
+            border-radius: 2rem;
+            content: '';
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            left: 2px;
+            top: 2px;
+            z-index: -1;
+            transition: background-color $t;
+        }
+      }
     }
+   
     &:hover {
       box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
-      .swiper-slide__hover {
-        height: 233px;
-        opacity: 1;
-      }
       &::after {
         background-color: rgba($white, .55);
       }
@@ -399,7 +405,7 @@ body {
 }
 // --------------------------------------
 .about {
-  padding-top: 3rem;
+  padding: 3rem 0 18.7rem;
   &__title {
     letter-spacing: 1.5px;
   }
